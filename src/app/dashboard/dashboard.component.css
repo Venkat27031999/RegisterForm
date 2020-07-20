@@ -1,0 +1,11 @@
+.heading{
+    color: blue;
+    text-align: center;
+    text-decoration: cyan;
+    font-style: oblique;
+}
+.container{
+    border-width: 3px;
+    border-style: solid;
+    border-color:antiquewhite;
+}

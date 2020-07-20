@@ -1,0 +1,29 @@
+<div class="userdetail">  
+  <h3 class="heading">Userdetails</h3>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userdet of userdetails">
+        <td>{{userdet.id}}</td>
+        <td>{{userdet.username}}</td>
+        <td>{{userdet.email}}</td>
+        <td>{{userdet.password}}</td>
+        <td>
+          <button class=" btn btn-primary " (click)="editUserDetail(userdet) ">Edit</button>
+        </td>
+        <td>
+          <button class="btn btn-danger ml-2 " (click)="deleteUserDetail(userdet) ">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+  </div>

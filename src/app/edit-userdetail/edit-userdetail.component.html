@@ -1,0 +1,32 @@
+<div class="col-md-6">
+  <h2 class="text-center">Change User details</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="username">First Name:</label>
+      <input formControlName="username" placeholder="User Name" name="username" class="form-control" id="username">
+      <div class="feedback-red" *ngIf="isInvalid('username')">
+        Username is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+      <div class="feedback-red" *ngIf="isEmailInvalid('email')">
+        Email is not valid.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input formControlName="password" placeholder="Password" name="password" class="form-control" id="password">
+      <div class="feedback-red" *ngIf="isInvalid('password')">
+        Passwordis required.
+      </div>
+    </div>
+
+    <button button [disabled]="addForm.invalid" class="btn btn-success">Submit</button>
+    <button class="btn btn-danger ml-2 " (click)="onCancel()">Cancel</button>
+  </form>
+</div>
